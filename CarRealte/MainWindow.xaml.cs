@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using CarRealte.DB;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,51 @@ namespace CarRealte
         public MainWindow()
         {
             InitializeComponent();
+            _addDataCar();
+            _addDataAllUser();
+            _addDataEmploee();
+            _addDataCustomer();
+            _addDataRetail();
+        }
+        private void _addDataCar()
+        {
+            using (RetailAutoContext db = new RetailAutoContext())
+            {
+                var car = db.CarDetails.ToList();
+                CarAll.ItemsSource = car;
+            }
+        }
+        private void _addDataAllUser()
+        {
+            using (RetailAutoContext db = new RetailAutoContext())
+            {
+                var user = db.ПользователиИИнформацияs.ToList();
+                UserAll.ItemsSource = user;
+            }
+        }
+        private void _addDataEmploee()
+        {
+            using (RetailAutoContext db = new RetailAutoContext())
+            {
+                var emploees = db.ПользователиИДолжностиs.ToList();
+                Emploee.ItemsSource = emploees;
+            }
+        }
+        private void _addDataCustomer()
+        {
+            using (RetailAutoContext db = new RetailAutoContext())
+            {
+                var customer = db.Клиентs.ToList();
+                Customer.ItemsSource = customer;
+            }
+        }
+        private void _addDataRetail()
+        {
+            using (RetailAutoContext db = new RetailAutoContext())
+            {
+                var retail = db.ПредставлениеАрендаs.ToList();
+                Retail.ItemsSource = retail;
+            }
         }
     }
 }

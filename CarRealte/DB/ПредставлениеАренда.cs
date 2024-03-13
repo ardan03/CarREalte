@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CarRealte;
+namespace CarRealte.DB;
 
 public partial class ПредставлениеАренда
 {

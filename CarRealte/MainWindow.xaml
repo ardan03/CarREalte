@@ -6,7 +6,104 @@
         xmlns:local="clr-namespace:CarRealte"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Стиль для вертикального TabControl -->
+        <Style x:Key="VerticalTabControlStyle" TargetType="TabControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabControl">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <!-- Колонка для вкладок -->
+                                <ColumnDefinition Width="*"/>
+                                <!-- Колонка для содержимого -->
+                            </Grid.ColumnDefinitions>
+                            <!-- Панель вкладок -->
+                            <ItemsPresenter Grid.Column="0" VerticalAlignment="Stretch"/>
+                            <!-- Панель содержимого -->
+                            <ContentPresenter Grid.Column="1" ContentSource="SelectedContent"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-
+        <!-- Использование вертикального TabControl -->
+        <TabControl Style="{StaticResource VerticalTabControlStyle}">
+            <TabItem Header="Автомобили">
+                <DataGrid AutoGenerateColumns ="False" x:Name="CarAll">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Гос номер" Binding="{Binding LicensePlate}" Width="*"/>
+                        <DataGridTextColumn Header="Марка" Binding="{Binding BrandName}" Width="*"/>
+                        <DataGridTextColumn Header="Модель" Binding="{Binding ModelName}" Width="*"/>
+                        <DataGridTextColumn Header="Тип кузова" Binding="{Binding BodyTypeName}" Width="*"/>
+                        <DataGridTextColumn Header="Трансмисия" Binding="{Binding TransmissionType}" Width="*"/>
+                        <DataGridTextColumn Header="Цвет кузова" Binding="{Binding ColorName}" Width="*"/>
+                        <DataGridTextColumn Header="Доступность" Binding="{Binding Availability}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Пользователи">
+                <DataGrid AutoGenerateColumns ="False" x:Name="UserAll">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="id Пользователя" Binding="{Binding IdПользователя}" Width="*"/>
+                        <DataGridTextColumn Header="Логин" Binding="{Binding Логин}" Width="*"/>
+                        <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}" Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Должность" Binding="{Binding Должность}" Width="*"/>
+                        <DataGridTextColumn Header="Номер телефона" Binding="{Binding НомерТелефона}" Width="*"/>
+                        <DataGridTextColumn Header="Водительское удостоверение" Binding="{Binding ВодительскоеУдостоверение}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Сотрудники">
+                <DataGrid AutoGenerateColumns ="False" x:Name="Emploee">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="id Сотрудника" Binding="{Binding IdПользователя}" Width="*"/>
+                        <DataGridTextColumn Header="Логин" Binding="{Binding Логин}" Width="*"/>
+                        <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}" Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Должность" Binding="{Binding Должность}" Width="*"/>
+                        <DataGridTextColumn Header="Зарплата" Binding="{Binding Зарплата}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Клиент">
+                <DataGrid AutoGenerateColumns ="False" x:Name="Customer">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="id Клиента" Binding="{Binding IdПользователя}" Width="*"/>
+                        <DataGridTextColumn Header="Логин" Binding="{Binding Логин}" Width="*"/>
+                        <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}" Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Номер телефона" Binding="{Binding НомерТелефона}" Width="*"/>
+                        <DataGridTextColumn Header="Водительское Удостоверение" Binding="{Binding ВодительскоеУдостоверение}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Аренда">
+                <DataGrid AutoGenerateColumns ="False" x:Name="Retail">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Цена Аренды" Binding="{Binding ЦенаАренды}" Width="*"/>
+                        <DataGridTextColumn Header="Марка" Binding="{Binding Марка}" Width="*"/>
+                        <DataGridTextColumn Header="Модель" Binding="{Binding Модель}" Width="*"/>
+                        <DataGridTextColumn Header="Название услуги" Binding="{Binding НазваниеАренды}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

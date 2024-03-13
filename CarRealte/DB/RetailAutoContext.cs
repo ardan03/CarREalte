@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CarRealte;
+namespace CarRealte.DB;
 
 public partial class RetailAutoContext : DbContext
 {
