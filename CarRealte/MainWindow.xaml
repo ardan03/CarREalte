@@ -153,8 +153,8 @@
                     <Grid Background="#185abd"  Grid.Row="1" Panel.ZIndex="1">
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
                             <TextBlock Text="Введите id Аренды" FontSize="20"/>
-                            <TextBox FontSize="18" Background="#FF588DE2" Margin="0 10 0 0"/>
-                            <Button Content="Отчет по аренде" Margin="0 150 0 0" FontSize="18" Height="50" Background="#FF588DE2" Command="{Binding trueAuto}">
+                            <TextBox FontSize="18" Background="#FF588DE2" Margin="0 10 0 0" Text="{Binding ID, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Button Content="Отчет по аренде" Margin="0 150 0 0" FontSize="18" Height="50" Background="#FF588DE2" Command="{Binding ExportWord}">
                             </Button>
                         </StackPanel>
                     </Grid>

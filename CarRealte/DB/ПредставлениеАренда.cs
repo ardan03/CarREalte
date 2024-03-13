@@ -5,6 +5,8 @@ namespace CarRealte.DB;
 
 public partial class ПредставлениеАренда
 {
+    public int IdАренды { get; set; }
+
     public string? Фамилия { get; set; }
 
     public string? Имя { get; set; }
@@ -16,4 +18,6 @@ public partial class ПредставлениеАренда
     public string? Модель { get; set; }
 
     public string? НазваниеАренды { get; set; }
+
+    public string? Описание { get; set; }
 }

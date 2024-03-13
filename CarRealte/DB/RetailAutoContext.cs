@@ -398,6 +398,7 @@ public partial class RetailAutoContext : DbContext
                 .HasNoKey()
                 .ToView("Представление_Аренда");
 
+            entity.Property(e => e.IdАренды).HasColumnName("id_Аренды");
             entity.Property(e => e.Имя).HasMaxLength(100);
             entity.Property(e => e.Марка)
                 .HasMaxLength(255)

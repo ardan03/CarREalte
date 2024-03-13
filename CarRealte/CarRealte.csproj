@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Sourc\**" />
+    <EmbeddedResource Remove="Sourc\**" />
+    <None Remove="Sourc\**" />
+    <Page Remove="Sourc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\carIco.png" />
     <None Remove="Resources\customerIco.png" />
     <None Remove="Resources\employeeIco.png" />
