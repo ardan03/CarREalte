@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarRealte")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79bd1f6484975de09a5df6c83fee2e7428b619bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarRealte")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarRealte")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
