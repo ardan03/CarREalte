@@ -25,7 +25,29 @@
                 <TextBlock Text="Password" FontSize="20"/>
                 <TextBox x:Name="Passwor" Background="Transparent" BorderThickness="2" BorderBrush="Black" MinWidth="280" Margin="0 10 0 0" Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <Button Content="Log In" x:Name="LogInBtn" Grid.Row="1" VerticalAlignment="Bottom" Height="50" Command="{Binding LoginCommand}"/>
+            <Button Content="Log In" x:Name="LogInBtn" Grid.Row="1" VerticalAlignment="Bottom" Height="50" Command="{Binding LoginCommand}">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#6beffa" Offset="0.01"/>
+                        <GradientStop Color="#00818c" Offset="0.3"/>
+                        <GradientStop Color="#00818c" Offset="0.7"/>
+                        <GradientStop Color="#6beffa" Offset="1.1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0 0 25 25">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
         </Grid>
     </Border>
 </Window>

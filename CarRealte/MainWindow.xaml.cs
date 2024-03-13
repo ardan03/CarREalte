@@ -1,4 +1,5 @@
 ﻿using CarRealte.DB;
+using CarRealte.ViewModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,7 @@ namespace CarRealte
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainwindowVM();
             _addDataCar();
             _addDataAllUser();
             _addDataEmploee();

@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
+       
         <Style x:Key="VerticalTabControlStyle" TargetType="TabControl">
             <Setter Property="Template">
                 <Setter.Value>
@@ -117,6 +118,48 @@
                         <DataGridTextColumn Header="Название услуги" Binding="{Binding НазваниеАренды}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
+            </TabItem>
+            <TabItem Margin="0 0 2 5">
+                <TabItem.Header>
+                    <Image Source="Resources/reportIco.png" Height="40" Width="40"/>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="53"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Отчеты в Exele"  FontSize="32" Background="#FF42FF00" TextAlignment="Center"/>
+                    <Grid Background="#107c41"  Grid.Row="1" Panel.ZIndex="1">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                            <Button Content="Отчет по Доступным машинам" Margin="0 0 70 0" FontSize="18" Height="50" Background="#FF00FF10" Command="{Binding trueAuto}">
+                            </Button>
+                            <Button Content="Отчет по не Доступным машинам" Margin="70 0 0 0" FontSize="18" Background="#FF00FF10" Command="{Binding falseAuto}">
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Image Source="Resources/reportIco.png" Height="40" Width="40"/>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="53"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Отчеты в Word"  FontSize="32" Background="#FF588DE2" TextAlignment="Center"/>
+                    <Grid Background="#185abd"  Grid.Row="1" Panel.ZIndex="1">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                            <TextBlock Text="Введите id Аренды" FontSize="20"/>
+                            <TextBox FontSize="18" Background="#FF588DE2" Margin="0 10 0 0"/>
+                            <Button Content="Отчет по аренде" Margin="0 150 0 0" FontSize="18" Height="50" Background="#FF588DE2" Command="{Binding trueAuto}">
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>

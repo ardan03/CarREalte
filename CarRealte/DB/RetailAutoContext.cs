@@ -33,9 +33,13 @@ public partial class RetailAutoContext : DbContext
 
     public virtual DbSet<Должность> Должностьs { get; set; }
 
+    public virtual DbSet<ДоступныеМашины> ДоступныеМашиныs { get; set; }
+
     public virtual DbSet<Клиент> Клиентs { get; set; }
 
     public virtual DbSet<Клиенты> Клиентыs { get; set; }
+
+    public virtual DbSet<НеДоступныеМашины> НеДоступныеМашиныs { get; set; }
 
     public virtual DbSet<Пользователи> Пользователиs { get; set; }
 
@@ -230,6 +234,39 @@ public partial class RetailAutoContext : DbContext
             entity.Property(e => e.Зарплата).HasColumnType("decimal(15, 2)");
         });
 
+        modelBuilder.Entity<ДоступныеМашины>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("Доступные машины");
+
+            entity.Property(e => e.Availability).HasColumnName("availability");
+            entity.Property(e => e.BodyTypeName)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("body_type_name");
+            entity.Property(e => e.BrandName)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("brand_name");
+            entity.Property(e => e.ColorName)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("color_name");
+            entity.Property(e => e.LicensePlate)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("license_plate");
+            entity.Property(e => e.ModelName)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("model_name");
+            entity.Property(e => e.TransmissionType)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("transmission_type");
+        });
+
         modelBuilder.Entity<Клиент>(entity =>
         {
             entity
@@ -271,6 +308,39 @@ public partial class RetailAutoContext : DbContext
             entity.HasOne(d => d.IdПользователяNavigation).WithMany(p => p.Клиентыs)
                 .HasForeignKey(d => d.IdПользователя)
                 .HasConstraintName("FK__Клиенты__id_Поль__5FB337D6");
+        });
+
+        modelBuilder.Entity<НеДоступныеМашины>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("Не доступные машины");
+
+            entity.Property(e => e.Availability).HasColumnName("availability");
+            entity.Property(e => e.BodyTypeName)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("body_type_name");
+            entity.Property(e => e.BrandName)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("brand_name");
+            entity.Property(e => e.ColorName)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("color_name");
+            entity.Property(e => e.LicensePlate)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("license_plate");
+            entity.Property(e => e.ModelName)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("model_name");
+            entity.Property(e => e.TransmissionType)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("transmission_type");
         });
 
         modelBuilder.Entity<Пользователи>(entity =>

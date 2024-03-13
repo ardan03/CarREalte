@@ -1,6 +1,8 @@
 ﻿using CarRealte.DB;
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +46,8 @@ namespace CarRealte.ViewModel
             LoginCommand = new RelayCommand(LogIN);
         }
 
+       
+
         private void LogIN(object obj)
         {
             using (RetailAutoContext db = new RetailAutoContext())
@@ -65,7 +69,7 @@ namespace CarRealte.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Такого пользователя нет", "Ошибка");
+                    MessageBox.Show("Такого пользователя нет", "Ошибка",MessageBoxButton.OK,MessageBoxImage.Error);
                 }
             }
         }
