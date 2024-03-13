@@ -133,3 +133,5 @@ C:\Users\ardan\source\repos\CarRealte\CarRealte\obj\Debug\net8.0-windows\refint\
 C:\Users\ardan\source\repos\CarRealte\CarRealte\obj\Debug\net8.0-windows\CarRealte.pdb
 C:\Users\ardan\source\repos\CarRealte\CarRealte\obj\Debug\net8.0-windows\CarRealte.genruntimeconfig.cache
 C:\Users\ardan\source\repos\CarRealte\CarRealte\obj\Debug\net8.0-windows\ref\CarRealte.dll
+C:\Users\ardan\source\repos\CarRealte\CarRealte\obj\Debug\net8.0-windows\LogIn.g.cs
+C:\Users\ardan\source\repos\CarRealte\CarRealte\obj\Debug\net8.0-windows\LogIn.baml

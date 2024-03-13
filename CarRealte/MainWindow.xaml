@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <!-- Стиль для вертикального TabControl -->
         <Style x:Key="VerticalTabControlStyle" TargetType="TabControl">
             <Setter Property="Template">
                 <Setter.Value>
@@ -39,7 +38,10 @@
     <Grid>
         <!-- Использование вертикального TabControl -->
         <TabControl Style="{StaticResource VerticalTabControlStyle}">
-            <TabItem Header="Автомобили">
+            <TabItem Margin="0 0 2 5">
+                <TabItem.Header>
+                    <Image Source="Resources/carIco.png" Height="40" Width="40"/>
+                </TabItem.Header>
                 <DataGrid AutoGenerateColumns ="False" x:Name="CarAll">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Гос номер" Binding="{Binding LicensePlate}" Width="*"/>
@@ -52,7 +54,10 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
-            <TabItem Header="Пользователи">
+            <TabItem Margin="0 0 2 5">
+                <TabItem.Header>
+                    <Image Source="Resources/userIco.png" Height="40" Width="40"/>
+                </TabItem.Header>
                 <DataGrid AutoGenerateColumns ="False" x:Name="UserAll">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="id Пользователя" Binding="{Binding IdПользователя}" Width="*"/>
@@ -66,7 +71,10 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
-            <TabItem Header="Сотрудники">
+            <TabItem Margin="0 0 2 5">
+                <TabItem.Header>
+                    <Image Source="Resources/employeeIco.png" Height="40" Width="40"/>
+                </TabItem.Header>
                 <DataGrid AutoGenerateColumns ="False" x:Name="Emploee">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="id Сотрудника" Binding="{Binding IdПользователя}" Width="*"/>
@@ -79,7 +87,10 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
-            <TabItem Header="Клиент">
+            <TabItem Margin="0 0 2 5">
+                <TabItem.Header>
+                    <Image Source="Resources/customerIco.png" Height="40" Width="40"/>
+                </TabItem.Header>
                 <DataGrid AutoGenerateColumns ="False" x:Name="Customer">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="id Клиента" Binding="{Binding IdПользователя}" Width="*"/>
@@ -92,7 +103,10 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
-            <TabItem Header="Аренда">
+            <TabItem Margin="0 0 2 5">
+                <TabItem.Header>
+                    <Image Source="Resources/retailAuto.png" Height="40" Width="40"/>
+                </TabItem.Header>
                 <DataGrid AutoGenerateColumns ="False" x:Name="Retail">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
