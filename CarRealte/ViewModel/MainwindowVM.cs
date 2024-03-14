@@ -70,13 +70,34 @@ namespace CarRealte.ViewModel
                     saveFileDialog.Filter = "Word files (*.docx)|*.docx|All files (*.*)|*.*";
                     saveFileDialog.FilterIndex = 1;
                     saveFileDialog.RestoreDirectory = true;
-                    wordDoc.SaveAs(saveFileDialog.FileName);
+
+                    // Показать диалог сохранения файла и дождаться, пока пользователь выберет место сохранения
+                    DialogResult result = saveFileDialog.ShowDialog();
+
+                    // Проверить, был ли выбран файл и нажата ли кнопка "Сохранить"
+                    if (result == DialogResult.OK)
+                    {
+                        // Получить выбранный путь для сохранения файла из диалога
+                        string filePath = saveFileDialog.FileName;
+
+                        // Убедиться, что путь не пустой
+                        if (!string.IsNullOrEmpty(filePath))
+                        {
+                            // Сохранить документ Word по указанному пути
+                            wordDoc.SaveAs(filePath);
+                        }
+                        else
+                        {
+                            // Обработать случай, если путь пустой
+                            System.Windows.MessageBox.Show("Выбран пустой путь для сохранения файла.", "Ошибка");
+                        }
+                    }
                     wordApp.Visible = true;
-                   
+
                 }
                 catch
                 {
-                    
+
                 }
 
             }

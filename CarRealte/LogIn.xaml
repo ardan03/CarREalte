@@ -18,7 +18,7 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Text="Log In Retai Auto Aplication" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Foreground="#000000" FontFamily="Bolt" Height="40" Width="394"/>
+            <TextBlock Text="Log In Retail Auto Aplication" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Foreground="#000000" FontFamily="Bolt" Height="40" Width="394"/>
             <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Height="132" Width="280" Margin="0 60 0 0">
                 <TextBlock Text="Login" FontSize="20"/>
                 <TextBox x:Name="LogI" Background="Transparent" BorderThickness="2" BorderBrush="Black" MinWidth="280" Margin="0 10 0 20" Text="{Binding Username ,UpdateSourceTrigger=PropertyChanged}"/>
