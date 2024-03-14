@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ardan\source\repos\CarRealte\CarRealte\App.xaml
-2-942320991
+4-1630907075
 
 29-534290505
 257-3925683
-LogIn.xaml;MainWindow.xaml;
+LogIn.xaml;MainWindow.xaml;Themes\DataGridStyle.xaml;Themes\LightTheme.xaml;
 
 False
 

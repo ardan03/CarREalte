@@ -43,15 +43,15 @@
                 <TabItem.Header>
                     <Image Source="Resources/carIco.png" Height="40" Width="40"/>
                 </TabItem.Header>
-                <DataGrid AutoGenerateColumns ="False" x:Name="CarAll">
+                <DataGrid AutoGenerateColumns ="False" x:Name="CarAll" Style="{StaticResource dataGrid}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Гос номер" Binding="{Binding LicensePlate}" Width="*"/>
-                        <DataGridTextColumn Header="Марка" Binding="{Binding BrandName}" Width="*"/>
-                        <DataGridTextColumn Header="Модель" Binding="{Binding ModelName}" Width="*"/>
-                        <DataGridTextColumn Header="Тип кузова" Binding="{Binding BodyTypeName}" Width="*"/>
-                        <DataGridTextColumn Header="Трансмисия" Binding="{Binding TransmissionType}" Width="*"/>
-                        <DataGridTextColumn Header="Цвет кузова" Binding="{Binding ColorName}" Width="*"/>
-                        <DataGridTextColumn Header="Доступность" Binding="{Binding Availability}" Width="*"/>
+                        <DataGridTextColumn Header="Гос номер" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding LicensePlate}" Width="*"/>
+                        <DataGridTextColumn Header="Марка" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding BrandName}" Width="*"/>
+                        <DataGridTextColumn Header="Модель" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding ModelName}" Width="*"/>
+                        <DataGridTextColumn Header="Тип кузова" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding BodyTypeName}" Width="*"/>
+                        <DataGridTextColumn Header="Трансмисия" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding TransmissionType}" Width="*"/>
+                        <DataGridTextColumn Header="Цвет кузова" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding ColorName}" Width="*"/>
+                        <DataGridTextColumn Header="Доступность" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Availability}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
@@ -59,16 +59,16 @@
                 <TabItem.Header>
                     <Image Source="Resources/userIco.png" Height="40" Width="40"/>
                 </TabItem.Header>
-                <DataGrid AutoGenerateColumns ="False" x:Name="UserAll">
+                <DataGrid AutoGenerateColumns ="False" x:Name="UserAll" Style="{StaticResource dataGrid}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="id Пользователя" Binding="{Binding IdПользователя}" Width="*"/>
-                        <DataGridTextColumn Header="Логин" Binding="{Binding Логин}" Width="*"/>
-                        <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}" Width="*"/>
-                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
-                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
-                        <DataGridTextColumn Header="Должность" Binding="{Binding Должность}" Width="*"/>
-                        <DataGridTextColumn Header="Номер телефона" Binding="{Binding НомерТелефона}" Width="*"/>
-                        <DataGridTextColumn Header="Водительское удостоверение" Binding="{Binding ВодительскоеУдостоверение}" Width="*"/>
+                        <DataGridTextColumn Header="id Пользователя" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding IdПользователя}" Width="*"/>
+                        <DataGridTextColumn Header="Логин" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Логин}" Width="*"/>
+                        <DataGridTextColumn Header="Пароль" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Пароль}" Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Должность" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Должность}" Width="*"/>
+                        <DataGridTextColumn Header="Номер телефона" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding НомерТелефона}" Width="*"/>
+                        <DataGridTextColumn Header="Водительское удостоверение" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding ВодительскоеУдостоверение}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
@@ -76,15 +76,15 @@
                 <TabItem.Header>
                     <Image Source="Resources/employeeIco.png" Height="40" Width="40"/>
                 </TabItem.Header>
-                <DataGrid AutoGenerateColumns ="False" x:Name="Emploee">
+                <DataGrid AutoGenerateColumns ="False" x:Name="Emploee" Style="{StaticResource dataGrid}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="id Сотрудника" Binding="{Binding IdПользователя}" Width="*"/>
-                        <DataGridTextColumn Header="Логин" Binding="{Binding Логин}" Width="*"/>
-                        <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}" Width="*"/>
-                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
-                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
-                        <DataGridTextColumn Header="Должность" Binding="{Binding Должность}" Width="*"/>
-                        <DataGridTextColumn Header="Зарплата" Binding="{Binding Зарплата}" Width="*"/>
+                        <DataGridTextColumn Header="id Сотрудника" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding IdПользователя}" Width="*"/>
+                        <DataGridTextColumn Header="Логин" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Логин}" Width="*"/>
+                        <DataGridTextColumn Header="Пароль" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Пароль}" Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Должность" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Должность}" Width="*"/>
+                        <DataGridTextColumn Header="Зарплата" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Зарплата}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
@@ -92,15 +92,15 @@
                 <TabItem.Header>
                     <Image Source="Resources/customerIco.png" Height="40" Width="40"/>
                 </TabItem.Header>
-                <DataGrid AutoGenerateColumns ="False" x:Name="Customer">
+                <DataGrid AutoGenerateColumns ="False" x:Name="Customer" Style="{StaticResource dataGrid}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="id Клиента" Binding="{Binding IdПользователя}" Width="*"/>
-                        <DataGridTextColumn Header="Логин" Binding="{Binding Логин}" Width="*"/>
-                        <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}" Width="*"/>
-                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
-                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
-                        <DataGridTextColumn Header="Номер телефона" Binding="{Binding НомерТелефона}" Width="*"/>
-                        <DataGridTextColumn Header="Водительское Удостоверение" Binding="{Binding ВодительскоеУдостоверение}" Width="*"/>
+                        <DataGridTextColumn Header="id Клиента" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding IdПользователя}" Width="*"/>
+                        <DataGridTextColumn Header="Логин" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Логин}" Width="*"/>
+                        <DataGridTextColumn Header="Пароль" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Пароль}" Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Номер телефона" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding НомерТелефона}" Width="*"/>
+                        <DataGridTextColumn Header="Водительское Удостоверение" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding ВодительскоеУдостоверение}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
@@ -108,14 +108,14 @@
                 <TabItem.Header>
                     <Image Source="Resources/retailAuto.png" Height="40" Width="40"/>
                 </TabItem.Header>
-                <DataGrid AutoGenerateColumns ="False" x:Name="Retail">
+                <DataGrid AutoGenerateColumns ="False" x:Name="Retail" Style="{StaticResource dataGrid}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="*"/>
-                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="*"/>
-                        <DataGridTextColumn Header="Цена Аренды" Binding="{Binding ЦенаАренды}" Width="*"/>
-                        <DataGridTextColumn Header="Марка" Binding="{Binding Марка}" Width="*"/>
-                        <DataGridTextColumn Header="Модель" Binding="{Binding Модель}" Width="*"/>
-                        <DataGridTextColumn Header="Название услуги" Binding="{Binding НазваниеАренды}" Width="*"/>
+                        <DataGridTextColumn Header="Фамилия" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Фамилия}" Width="*"/>
+                        <DataGridTextColumn Header="Имя" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Имя}" Width="*"/>
+                        <DataGridTextColumn Header="Цена Аренды" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding ЦенаАренды}" Width="*"/>
+                        <DataGridTextColumn Header="Марка" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Марка}" Width="*"/>
+                        <DataGridTextColumn Header="Модель" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding Модель}" Width="*"/>
+                        <DataGridTextColumn Header="Название услуги" HeaderStyle="{StaticResource dataGridHeader}" Binding="{Binding НазваниеАренды}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>

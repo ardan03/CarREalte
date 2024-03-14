@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:CarRealte"
              StartupUri="LogIn.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Themes/DataGridStyle.xaml"/>
     </Application.Resources>
 </Application>
