@@ -92,7 +92,6 @@ namespace CarRealte.ViewModel
                             System.Windows.MessageBox.Show("Выбран пустой путь для сохранения файла.", "Ошибка");
                         }
                     }
-                    wordApp.Visible = true;
 
                 }
                 catch
